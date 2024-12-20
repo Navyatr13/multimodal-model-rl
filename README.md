@@ -22,10 +22,9 @@ This project implements a multimodal machine learning model combining text and i
    ```
 
 ### 2. Create a virtual environment:
-    ```bash
     conda create -n mm_env
     conda activate mm_env
-    ```
+
 ### 3. Install dependencies:
     ```   pip install -r requirements.txt    ```
 ### 4. Dataset Preparation
