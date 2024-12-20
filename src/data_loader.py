@@ -44,7 +44,6 @@ class MultimodalDataModule(pl.LightningDataModule):
 
 class MultimodalDataset(Dataset):
     def __init__(self, jsonl_file, image_dir, save_path=None, load_processed=False, has_labels=True):
-        print(jsonl_file,"jsonl_file**************************")
         self.has_labels = has_labels
         if load_processed and save_path and os.path.exists(save_path):
             # Load pre-processed data
