@@ -47,25 +47,40 @@ python src/train_pl.py
 ### 6. Unit Testing
 Run unit tests to verify functionality:
 ``` python -m unittest discover -s unit_tests```
+
 ### Model Architecture
+
 The model combines textual and visual features using:
 
-Text Encoder: Pretrained BERT from the transformers library.
-Image Encoder: Pretrained ResNet18 from torchvision.models.
-Fusion Layer: Linear layer combining outputs from the text and image encoders.
-Classifier: Binary classification head.
-Requirements
-Python 3.8+
-PyTorch
-PyTorch Lightning
-Transformers
-torchvision
-pandas
-Pillow
-tqdm
-Acknowledgments
-PyTorch Lightning for simplifying model training.
-Hugging Face Transformers for pretrained BERT.
-torchvision for pretrained ResNet.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+- **Text Encoder**: Pretrained BERT from the `transformers` library.
+- **Image Encoder**: Pretrained ResNet18 from `torchvision.models`.
+- **Fusion Layer**: Linear layer combining outputs from the text and image encoders.
+- **Classifier**: Binary classification head for binary output.
+
+---
+
+### Requirements
+
+- Python 3.8+
+- PyTorch
+- PyTorch Lightning
+- Transformers
+- torchvision
+- pandas
+- Pillow
+- tqdm
+
+---
+
+### Acknowledgments
+
+- PyTorch Lightning for simplifying model training.
+- Hugging Face Transformers for pretrained BERT.
+- torchvision for pretrained ResNet.
+
+---
+
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
