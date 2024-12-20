@@ -19,16 +19,15 @@ This project implements a multimodal machine learning model combining text and i
    ```bash
    git clone https://github.com/your-username/multimodal-model-rl.git
    cd multimodal-model-rl
+   ```
 
 ### 2. Create a virtual environment:
     ```bash
     conda create -n mm_env
     conda activate mm_env
-   
-### 3. Install dependencies:
     ```
-   pip install -r requirements.txt
-   ```
+### 3. Install dependencies:
+    ```   pip install -r requirements.txt    ```
 ### 4. Dataset Preparation
 Place your dataset files (train.jsonl, test.jsonl, images) in the data/ directory.
 Preprocess the dataset: Run the preprocessing script in data_loader.py to generate pickle files:
