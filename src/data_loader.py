@@ -32,7 +32,7 @@ class MultimodalDataModule(pl.LightningDataModule):
                           num_workers=0,
                           batch_size=self.batch_size,
                           shuffle=True,
-                          persistent_workers=True
+                          #persistent_workers=True
                           )
 
     def test_dataloader(self):
