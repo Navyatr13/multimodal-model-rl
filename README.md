@@ -1,4 +1,3 @@
-
 # Multimodal Model with PyTorch Lightning
 
 This project implements a multimodal machine learning model combining text and image inputs using PyTorch Lightning. The model is trained and tested on a dataset designed for binary classification tasks.
@@ -13,40 +12,48 @@ This project implements a multimodal machine learning model combining text and i
 
 ---
 
+## Project Structure
+├── data/ # Data directory │ ├── train.jsonl # Training data (JSONL format) │ ├── test.jsonl # Test data (JSONL format) │ ├── preprocessed_train.pkl # Preprocessed training dataset │ ├── preprocessed_test.pkl # Preprocessed test dataset ├── src/ # Source code directory │ ├── data_loader.py # Dataset and DataLoader implementation │ ├── model.py # Multimodal Lightning Model definition │ ├── train_pl.py # Training and testing pipeline ├── unit_tests/ # Unit test directory │ ├── test_data_loader.py # Tests for data loading │ ├── test_training.py # Tests for training pipeline └── README.md # Project README
+
+---
+
 ## Installation
 
-### 1. Clone the repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/multimodal-model-rl.git
    cd multimodal-model-rl
-   ```
+2. Create a virtual environment:
 
-### 2. Create a virtual environment:
-    conda create -n mm_env
-    conda activate mm_env
-### 3. Install dependencies:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+3. Install dependencies:
+
+    ```bash
     pip install -r requirements.txt
-### 4. Dataset Preparation
-Place your dataset files (train.jsonl, test.jsonl, images) in the data/ directory.
-Preprocess the dataset: Run the preprocessing script in data_loader.py to generate pickle files:
-``` 
-python src/data_loader.py
-```
-### 5. Usage
-##### Training the Model
-To train the model:
-``` 
-python src/train_pl.py
-```
-##### Testing the Model
-To evaluate the model:
-```
-python src/train_pl.py
-```
+   
+### Dataset Preparation
+1. Place your dataset files (train.jsonl, test.jsonl, images) in the data/ directory.
 
-### 6. Unit Testing
+2. Preprocess the dataset: Run the preprocessing script in data_loader.py to generate pickle files:
+    ```bash
+    python src/data_loader.py
+### Usage
+#### Training the Model
+To train the model:
+
+    ```bash
+    python src/train_pl.py
+#### Testing the Model
+To evaluate the model:
+
+    ```bash
+    python src/train_pl.py
+
+### Unit Testing
 Run unit tests to verify functionality:
-``` python -m unittest discover -s unit_tests```
+```python -m unittest discover -s unit_tests```
 
 ### Model Architecture
 
@@ -83,4 +90,3 @@ The model combines textual and visual features using:
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
