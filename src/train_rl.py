@@ -1,10 +1,10 @@
 from model import MultimodalLightningModel
 from data_loader import MultimodalDataModule
-from rl_trainer import RLTrainer
+from rl_trainer import MultimodalRLTrainer
 
 if __name__ == "__main__":
     # Load pretrained model
-    model = MultimodalLightningModel.load_from_checkpoint('./checkpoints/your_best_model.ckpt')
+    model = MultimodalLightningModel.load_from_checkpoint('./checkpoints/best_model.ckpt')
 
     # Load DataModule
     data_module = MultimodalDataModule(
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     train_loader = data_module.train_dataloader()
 
     # Train with RL
-    rl_trainer = RLTrainer(model=model, dataloader=train_loader, lr=1e-4)
+    rl_trainer = MultimodalRLTrainer(model=model, dataloader=train_loader, lr=1e-4)
     num_epochs = 5
     for epoch in range(num_epochs):
         avg_loss = rl_trainer.train_one_epoch()
