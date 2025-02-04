@@ -8,8 +8,8 @@ if __name__ == "__main__":
 
     # Load DataModule
     data_module = MultimodalDataModule(
-        train_file='./data/preprocessed_train.pkl',
-        test_file='./data/preprocessed_test.pkl',
+        train_file='./data/full_preprocessed_train.pkl',
+        test_file='./data/full_preprocessed_test.pkl',
         batch_size=32
     )
     data_module.setup("fit")

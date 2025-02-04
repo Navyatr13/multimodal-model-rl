@@ -21,7 +21,7 @@ This project implements a multimodal machine learning model combining text and i
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/multimodal-model-rl.git
+   git clone https://github.com/Navyatr13/multimodal-model-rl.git
    cd multimodal-model-rl
 2. Create a virtual environment:
 
@@ -38,7 +38,7 @@ This project implements a multimodal machine learning model combining text and i
 
 2. Preprocess the dataset: Run the preprocessing script in data_loader.py to generate pickle files:
     ```bash
-    python src/data_loader.py
+
 ### Usage
 #### Training the Model
 To train the model:

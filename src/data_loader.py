@@ -52,6 +52,7 @@ class MultimodalDataset(Dataset):
         else:
             # Load data from JSONL file
             self.data = pd.read_json(jsonl_file, lines=True)
+            print(len(self.data))
             self.image_dir = image_dir
 
             def file_exists(img):
@@ -109,16 +110,16 @@ class MultimodalDataset(Dataset):
 
 if __name__ == "__main__":
     train_dataset = MultimodalDataset(
-        jsonl_file="./data/train.jsonl",
+        jsonl_file="./data/full_train.jsonl",
         image_dir="./data/",
-        save_path="./data/preprocessed_train.pkl",
+        save_path="./data/full_preprocessed_train.pkl",
         load_processed= True,  # Set to True after initial run
         has_labels=True
     )
     test_dataset = MultimodalDataset(
-        jsonl_file="./data/test.jsonl",
+        jsonl_file="./data/full_test.jsonl",
         image_dir="./data/",
-        save_path="./data/preprocessed_test.pkl",
+        save_path="./data/full_preprocessed_test.pkl",
         load_processed=False,
         has_labels=False
     )

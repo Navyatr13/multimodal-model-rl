@@ -50,6 +50,7 @@ class MultimodalLightningModel(pl.LightningModule):
     def training_step(self, batch, batch_idx):
         text, image, label = batch
         output = self(text, image).squeeze()
+        print(label.float())
         loss = self.criterion(output, label.float())
         self.log('train_loss', loss)
         return loss

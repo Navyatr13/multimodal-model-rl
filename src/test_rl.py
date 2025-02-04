@@ -38,8 +38,8 @@ def test_rl_model(model_path, data_module):
 
 if __name__ == "__main__":
     model_path = "./checkpoints/rl_finetuned_model.pth"
-    train_file = './data/preprocessed_train.pkl'
-    test_file = './data/preprocessed_test.pkl'
+    train_file = './data/full_preprocessed_train.pkl'
+    test_file = './data/full_preprocessed_test.pkl'
     batch_size = 32
 
     # Initialize DataModule
